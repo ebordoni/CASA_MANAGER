@@ -1,6 +1,6 @@
 # home manager
 
-Gestionale familiare locale per coordinare vendita e acquisto di casa. React e TypeScript strict, Mantine **9.7.4**, Vite, Fastify e SQLite. Versione **0.3.0**, da validare sul dispositivo Home Assistant. L’interfaccia usa Noto Sans, incluso nell’app per l’uso offline.
+Gestionale familiare locale per coordinare vendita e acquisto di casa. React e TypeScript strict, Mantine **9.7.4**, Vite, Fastify e SQLite. Versione **0.3.1**, da validare sul dispositivo Home Assistant. L’interfaccia usa Noto Sans, incluso nell’app per l’uso offline.
 
 Il packaging Home Assistant richiede il collaudo sull’installazione reale.
 
@@ -103,7 +103,7 @@ Prima di aggiornare: scaricare un backup verificabile e arrestare il servizio. A
 npm test
 npm run build
 npm audit --omit=dev
-docker build -t home-manager:0.3.0 .
+docker build -t home-manager:0.3.1 .
 node scripts/container-smoke.mjs
 ```
 

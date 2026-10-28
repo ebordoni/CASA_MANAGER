@@ -1,5 +1,5 @@
 name: home manager
-version: "0.3.0"
+version: "0.3.1"
 slug: casa_manager
 description: "Vendita e acquisto casa: documenti, scadenze, mutui e finanze familiari"
 arch:
@@ -12,7 +12,7 @@ timeout: 30
 stage: experimental
 ingress: true
 ingress_port: 8104
-ingress_entry: /
+ingress_entry: index.html
 ingress_stream: true
 panel_icon: mdi:home-switch
 panel_title: home manager

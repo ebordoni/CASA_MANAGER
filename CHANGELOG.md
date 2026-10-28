@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 - 2026-10-28
+
+- Apertura Home Assistant Ingress su `index.html`, evitando il percorso `//` che il server statico rifiuta con 403 Forbidden.
+- Nome del pacchetto nel lockfile allineato a home manager.
+
 ## 0.3.0 - 2026-10-28
 
 - Nome visibile dell’app, add-on, report ed esportazioni aggiornato a home manager.

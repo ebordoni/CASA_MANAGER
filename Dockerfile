@@ -10,7 +10,7 @@ LABEL io.hass.name="home manager" \
       io.hass.description="Gestione familiare di vendita e acquisto immobiliare" \
       io.hass.arch="aarch64|amd64" \
       io.hass.type="addon" \
-      io.hass.version="0.3.0"
+      io.hass.version="0.3.1"
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev --no-fund && npm cache clean --force
