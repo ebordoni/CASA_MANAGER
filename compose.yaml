@@ -1,0 +1,16 @@
+services:
+  home-manager:
+    build: .
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:${APP_PORT:-3088}:8104"
+    environment:
+      APP_PASSWORD: ${APP_PASSWORD:?Impostare una password locale di almeno 16 caratteri nel file .env}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      INGRESS_ONLY: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - casa_data:/data
+volumes:
+  casa_data:

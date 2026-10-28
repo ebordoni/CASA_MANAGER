@@ -1,0 +1,65 @@
+{
+  "formatVersion": 1,
+  "description": "Configurazione neutra per nuove installazioni. Nessun dato personale, immobile o importo precompilato.",
+  "records": [
+    {
+      "key": "operations-1",
+      "entity": "operations",
+      "data": {
+        "title": "La mia operazione",
+        "status": "active",
+        "currency": "EUR",
+        "liquidity_state": "unverified"
+      }
+    },
+    {
+      "key": "transaction_states-1",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Trattativa aperta",
+        "rank": 0
+      }
+    },
+    {
+      "key": "transaction_states-2",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Proposta accettata",
+        "rank": 1
+      }
+    },
+    {
+      "key": "transaction_states-3",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Preliminare firmato",
+        "rank": 2
+      }
+    },
+    {
+      "key": "transaction_states-4",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Preparazione rogito",
+        "rank": 3
+      }
+    },
+    {
+      "key": "transaction_states-5",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Rogito stipulato",
+        "rank": 4,
+        "terminal": "yes"
+      }
+    },
+    {
+      "key": "settings-1",
+      "entity": "settings",
+      "data": {
+        "title": "reminder_days",
+        "value": "14"
+      }
+    }
+  ]
+}

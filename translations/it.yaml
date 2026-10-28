@@ -1,0 +1,4 @@
+configuration:
+  log_level:
+    name: Livello dei log
+    description: "Dettaglio dei log tecnici. I contenuti dei documenti e le password non vengono registrati."

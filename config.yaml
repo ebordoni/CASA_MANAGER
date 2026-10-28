@@ -1,0 +1,31 @@
+name: home manager
+version: "0.3.0"
+slug: casa_manager
+description: "Vendita e acquisto casa: documenti, scadenze, mutui e finanze familiari"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: true
+timeout: 30
+stage: experimental
+ingress: true
+ingress_port: 8104
+ingress_entry: /
+ingress_stream: true
+panel_icon: mdi:home-switch
+panel_title: home manager
+panel_admin: true
+watchdog: "http://[HOST]:8104/api/health"
+backup: cold
+environment:
+  INGRESS_ONLY: "true"
+  HOST: "0.0.0.0"
+  PORT: "8104"
+  DATA_DIR: /data
+  TZ: Europe/Rome
+options:
+  log_level: info
+schema:
+  log_level: list(debug|info|warn|error|fatal)

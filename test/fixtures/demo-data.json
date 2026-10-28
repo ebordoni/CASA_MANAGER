@@ -1,0 +1,889 @@
+{
+  "formatVersion": 1,
+  "description": "Dati interamente sintetici per i test automatizzati. Nessuna persona o operazione reale.",
+  "records": [
+    {
+      "key": "operations-1",
+      "entity": "operations",
+      "data": {
+        "title": "Operazione dimostrativa 1",
+        "status": "active",
+        "currency": "EUR",
+        "liquidity_state": "unverified",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "transaction_states-1",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Trattativa aperta",
+        "rank": 0
+      }
+    },
+    {
+      "key": "transaction_states-2",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Proposta accettata",
+        "rank": 1
+      }
+    },
+    {
+      "key": "transaction_states-3",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Preliminare firmato",
+        "rank": 2
+      }
+    },
+    {
+      "key": "transaction_states-4",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Preparazione rogito",
+        "rank": 3
+      }
+    },
+    {
+      "key": "transaction_states-5",
+      "entity": "transaction_states",
+      "data": {
+        "title": "Rogito stipulato",
+        "rank": 4,
+        "terminal": "yes"
+      }
+    },
+    {
+      "key": "properties-1",
+      "entity": "properties",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Immobile dimostrativo 1",
+        "locality": "Località dimostrativa",
+        "property_type": "Abitazione di esempio",
+        "internal_area": 85,
+        "garden_area": 60,
+        "construction_year": 2012,
+        "confidence": "estimated",
+        "features": "Caratteristiche dimostrative",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "issues": "Verifiche tecniche di esempio"
+      }
+    },
+    {
+      "key": "properties-2",
+      "entity": "properties",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Immobile dimostrativo 2",
+        "locality": "Località dimostrativa",
+        "property_type": "Abitazione di esempio",
+        "confidence": "provisional",
+        "features": "Caratteristiche dimostrative",
+        "issues": "Verifiche tecniche di esempio"
+      }
+    },
+    {
+      "key": "cadastral_units-1",
+      "entity": "cadastral_units",
+      "data": {
+        "title": "Unità dimostrativa 1",
+        "property_id": "@properties-2",
+        "category": "A/2",
+        "rooms": 6,
+        "income": 60000,
+        "confidence": "provisional",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "cadastral_units-2",
+      "entity": "cadastral_units",
+      "data": {
+        "title": "Unità dimostrativa 2",
+        "property_id": "@properties-2",
+        "category": "C/6",
+        "area": 22,
+        "income": 5500,
+        "confidence": "provisional"
+      }
+    },
+    {
+      "key": "transactions-1",
+      "entity": "transactions",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Vendita · Casa attuale",
+        "property_id": "@properties-1",
+        "kind": "sale",
+        "status": "@transaction_states-1",
+        "agreed_price": 18000000,
+        "price_state": "provisional",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "transactions-2",
+      "entity": "transactions",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Acquisto · Nuova casa",
+        "property_id": "@properties-2",
+        "kind": "purchase",
+        "status": "@transaction_states-3",
+        "agreed_price": 26000000,
+        "price_state": "confirmed",
+        "paid_deposit": 2000000,
+        "deed_expected": "2030-10-15",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "people-1",
+      "entity": "people",
+      "data": {
+        "title": "Persona di esempio 1",
+        "role": "Proprietario di esempio"
+      }
+    },
+    {
+      "key": "people-2",
+      "entity": "people",
+      "data": {
+        "title": "Persona di esempio 2",
+        "role": "Proprietario di esempio"
+      }
+    },
+    {
+      "key": "people-3",
+      "entity": "people",
+      "data": {
+        "title": "Persona di esempio 3",
+        "role": "Venditore di esempio"
+      }
+    },
+    {
+      "key": "transaction_parties-1",
+      "entity": "transaction_parties",
+      "data": {
+        "title": "Parte dimostrativa 1",
+        "transaction_id": "@transactions-2",
+        "person_id": "@people-1",
+        "role": "Acquirente"
+      }
+    },
+    {
+      "key": "transaction_parties-2",
+      "entity": "transaction_parties",
+      "data": {
+        "title": "Parte dimostrativa 2",
+        "transaction_id": "@transactions-1",
+        "person_id": "@people-1",
+        "role": "Proprietà / quota da verificare",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "transaction_parties-3",
+      "entity": "transaction_parties",
+      "data": {
+        "title": "Parte dimostrativa 3",
+        "transaction_id": "@transactions-2",
+        "person_id": "@people-2",
+        "role": "Acquirente"
+      }
+    },
+    {
+      "key": "transaction_parties-4",
+      "entity": "transaction_parties",
+      "data": {
+        "title": "Parte dimostrativa 4",
+        "transaction_id": "@transactions-1",
+        "person_id": "@people-2",
+        "role": "Proprietà / quota da verificare",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "transaction_parties-5",
+      "entity": "transaction_parties",
+      "data": {
+        "title": "Parte dimostrativa 5",
+        "transaction_id": "@transactions-2",
+        "person_id": "@people-3",
+        "role": "Venditore"
+      }
+    },
+    {
+      "key": "transaction_dependencies-1",
+      "entity": "transaction_dependencies",
+      "data": {
+        "title": "Proventi vendita necessari all’acquisto",
+        "transaction_id": "@transactions-2",
+        "prerequisite_id": "@transactions-1",
+        "status": "unverified",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "documents-1",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Preliminare acquisto firmato",
+        "category": "Contratti",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-2",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Ricevuta caparra confirmatoria",
+        "category": "Pagamenti",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-3",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Visura catastale aggiornata · acquisto",
+        "category": "Catasto",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-4",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Planimetrie catastali · acquisto",
+        "category": "Catasto",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-5",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "APE · acquisto",
+        "category": "Energia",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-6",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Atto di provenienza · acquisto",
+        "category": "Provenienza",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-7",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Documentazione urbanistica e titoli edilizi · acquisto",
+        "category": "Urbanistica",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-8",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Visura catastale aggiornata · vendita",
+        "category": "Catasto",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-9",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Planimetrie catastali · vendita",
+        "category": "Catasto",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-10",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "APE · vendita",
+        "category": "Energia",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-11",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Atto di provenienza · vendita",
+        "category": "Provenienza",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-12",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Documentazione urbanistica e titoli edilizi · vendita",
+        "category": "Urbanistica",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-13",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Conteggio estintivo aggiornato",
+        "category": "Mutuo esistente",
+        "transaction_id": "@transactions-1",
+        "property_id": "@properties-1",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-14",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Perizia bancaria",
+        "category": "Nuovo mutuo",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "documents-15",
+      "entity": "documents",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Documentazione reddituale per la banca",
+        "category": "Nuovo mutuo",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_request"
+      }
+    },
+    {
+      "key": "contracts-1",
+      "entity": "contracts",
+      "data": {
+        "title": "Contratto dimostrativo 1",
+        "transaction_id": "@transactions-2",
+        "kind": "Preliminare",
+        "document_id": "@documents-1",
+        "signature_status": "signed",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "contract_clauses-1",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 1",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-1",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 1",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-1",
+        "obligated_id": "@people-3",
+        "action": "Adempimento dimostrativo 1 da verificare",
+        "due_date": null,
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "contract_clauses-2",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 2",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-2",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 2",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-2",
+        "obligated_id": null,
+        "action": "Adempimento dimostrativo 2 da verificare",
+        "due_date": null,
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "contract_clauses-3",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 3",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-3",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 3",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-3",
+        "obligated_id": "@people-3",
+        "action": "Adempimento dimostrativo 3 da verificare",
+        "due_date": null,
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "contract_clauses-4",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 4",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-4",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 4",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-4",
+        "obligated_id": null,
+        "action": "Adempimento dimostrativo 4 da verificare",
+        "due_date": "2030-10-15",
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "contract_clauses-5",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 5",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-5",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 5",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-5",
+        "obligated_id": null,
+        "action": "Adempimento dimostrativo 5 da verificare",
+        "due_date": null,
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "contract_clauses-6",
+      "entity": "contract_clauses",
+      "data": {
+        "title": "Clausola dimostrativa 6",
+        "contract_id": "@contracts-1",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali.",
+        "reference_text": null
+      }
+    },
+    {
+      "key": "obligations-6",
+      "entity": "obligations",
+      "data": {
+        "title": "Obbligo dimostrativo 6",
+        "transaction_id": "@transactions-2",
+        "clause_id": "@contract_clauses-6",
+        "obligated_id": null,
+        "action": "Adempimento dimostrativo 6 da verificare",
+        "due_date": "2030-10-15",
+        "status": "unverified",
+        "risk": "high",
+        "evidence_required": "yes"
+      }
+    },
+    {
+      "key": "deadlines-1",
+      "entity": "deadlines",
+      "data": {
+        "title": "Scadenza dimostrativa 1",
+        "transaction_id": "@transactions-2",
+        "due_date": "2030-08-15",
+        "reminder_days": 30,
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "deadlines-2",
+      "entity": "deadlines",
+      "data": {
+        "title": "Scadenza dimostrativa 2",
+        "transaction_id": "@transactions-2",
+        "due_date": "2030-10-15",
+        "reminder_days": 60,
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-1",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 1",
+        "transaction_id": "@transactions-1",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-2",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 2",
+        "transaction_id": "@transactions-1",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-3",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 3",
+        "transaction_id": "@transactions-2",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-4",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 4",
+        "transaction_id": "@transactions-2",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-5",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 5",
+        "transaction_id": "@transactions-2",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "tasks-6",
+      "entity": "tasks",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Attività dimostrativa 6",
+        "transaction_id": "@transactions-2",
+        "priority": "high",
+        "risk": "high",
+        "status": "todo",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "task_dependencies-1",
+      "entity": "task_dependencies",
+      "data": {
+        "title": "Pianificare i fondi dopo il prezzo di vendita",
+        "task_id": "@tasks-6",
+        "prerequisite_id": "@tasks-1"
+      }
+    },
+    {
+      "key": "mortgages-1",
+      "entity": "mortgages",
+      "data": {
+        "title": "Nuovo mutuo · da valutare",
+        "transaction_id": "@transactions-2",
+        "years": 25,
+        "status": "to_evaluate",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "scenarios-1",
+      "entity": "scenarios",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Prudenziale",
+        "sale_price": 17000000,
+        "mortgage_payoff": 1000000,
+        "costs": 1200000,
+        "liquidity": 0,
+        "reserve": 200000,
+        "years": 20,
+        "tan": 3,
+        "extraordinary_verified": 0,
+        "assumptions": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "scenarios-2",
+      "entity": "scenarios",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Centrale",
+        "sale_price": 18000000,
+        "mortgage_payoff": 1000000,
+        "costs": 1000000,
+        "liquidity": 300000,
+        "reserve": 200000,
+        "years": 20,
+        "tan": 3,
+        "extraordinary_verified": 0,
+        "assumptions": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "scenarios-3",
+      "entity": "scenarios",
+      "data": {
+        "operation_id": "@operations-1",
+        "title": "Favorevole",
+        "sale_price": 19000000,
+        "mortgage_payoff": 1000000,
+        "costs": 800000,
+        "liquidity": 600000,
+        "reserve": 200000,
+        "years": 20,
+        "tan": 3,
+        "extraordinary_verified": 0,
+        "assumptions": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklists-1",
+      "entity": "checklists",
+      "data": {
+        "title": "Preparazione rogito · vendita",
+        "transaction_id": "@transactions-1"
+      }
+    },
+    {
+      "key": "checklist_items-1",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Verificare documentazione con il notaio",
+        "checklist_id": "@checklists-1",
+        "kind": "professional_review",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-2",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Riscontro tecnico urbanistico e catastale",
+        "checklist_id": "@checklists-1",
+        "kind": "professional_review",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-3",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Concordare pagamenti e disponibilità dei fondi",
+        "checklist_id": "@checklists-1",
+        "kind": "necessary",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-4",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Acquisire APE e atti richiesti",
+        "checklist_id": "@checklists-1",
+        "kind": "necessary",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-5",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Concordare consegna chiavi e letture contatori",
+        "checklist_id": "@checklists-1",
+        "kind": "optional",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklists-2",
+      "entity": "checklists",
+      "data": {
+        "title": "Preparazione rogito · acquisto",
+        "transaction_id": "@transactions-2"
+      }
+    },
+    {
+      "key": "checklist_items-6",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Verificare documentazione con il notaio",
+        "checklist_id": "@checklists-2",
+        "kind": "professional_review",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-7",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Riscontro tecnico urbanistico e catastale",
+        "checklist_id": "@checklists-2",
+        "kind": "professional_review",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-8",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Concordare pagamenti e disponibilità dei fondi",
+        "checklist_id": "@checklists-2",
+        "kind": "necessary",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-9",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Acquisire APE e atti richiesti",
+        "checklist_id": "@checklists-2",
+        "kind": "necessary",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "checklist_items-10",
+      "entity": "checklist_items",
+      "data": {
+        "title": "Concordare consegna chiavi e letture contatori",
+        "checklist_id": "@checklists-2",
+        "kind": "optional",
+        "status": "unverified",
+        "source": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "works-1",
+      "entity": "works",
+      "data": {
+        "title": "Lavoro dimostrativo 1",
+        "transaction_id": "@transactions-2",
+        "property_id": "@properties-2",
+        "status": "to_evaluate",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    },
+    {
+      "key": "settings-1",
+      "entity": "settings",
+      "data": {
+        "title": "reminder_days",
+        "value": "14",
+        "notes": "Dato sintetico per collaudo; nessun riferimento a persone, immobili o accordi reali."
+      }
+    }
+  ]
+}
