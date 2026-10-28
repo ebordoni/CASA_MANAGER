@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 - 2026-10-28
+
+- Icona dell’add-on Home Assistant con lo stesso simbolo e colore del marchio dell’app, in formato PNG 128 × 128.
+
 ## 0.3.1 - 2026-10-28
 
 - Apertura Home Assistant Ingress su `index.html`, evitando il percorso `//` che il server statico rifiuta con 403 Forbidden.

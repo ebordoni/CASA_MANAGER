@@ -1,5 +1,5 @@
 name: home manager
-version: "0.3.1"
+version: "0.3.2"
 slug: casa_manager
 description: "Vendita e acquisto casa: documenti, scadenze, mutui e finanze familiari"
 arch:
